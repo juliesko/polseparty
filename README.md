@@ -1,2 +1,2 @@
-# polseparty
+# pølseparty
 Vi lager pølsesiden :-)
