@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import hotdog from './hotdog.png';
 import boblerbilde from './bobler.png';
 import './App.css';
@@ -16,7 +16,7 @@ const antallBilder = 15
 const polser = Array.from(Array(antallBilder).keys()).map((tall) => {
   return (
     <div className="polse" style={generateRandomCss(tall, antallBilder)}>
-      <img src={hotdog} height="50" width="75" />
+      <img alt="polse" src={hotdog} height="50" width="75" />
     </div>
   )
 })
@@ -24,7 +24,7 @@ const polser = Array.from(Array(antallBilder).keys()).map((tall) => {
 const bobler = Array.from(Array(antallBilder).keys()).map((tall) => {
   return (
     <div className="polse" style={generateRandomCss(tall, antallBilder)}>
-      <img src={boblerbilde} height="97" width="75" />
+      <img alt="bobler" src={boblerbilde} height="97" width="75" />
     </div>
   )
 })
