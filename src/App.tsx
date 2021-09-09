@@ -2,19 +2,14 @@ import React, { useEffect, useState } from 'react';
 import hotdog from './hotdog.png';
 import boblerbilde from './bobler.png';
 import './App.css';
-import ReactAudioPlayer from 'react-audio-player';
-
+import Song from './Song';
 
 function generateRandomCss(tall: number, antallBilder: number) {
-
-
   const animasjonsTall = Math.random() * (20 - 5) + 5 
-
   return {
     left: `${tall * (100 / antallBilder)}%`, animation: `fall ${animasjonsTall}s linear ${Math.random() * 5}s infinite`
   }
 }
-
 
 const antallBilder = 15
 
@@ -36,17 +31,9 @@ const bobler = Array.from(Array(antallBilder).keys()).map((tall) => {
 
 
 function App() {
-  const audio = new Audio()
-
 
   return (
     <div className="app">
-      <button type="button" onClick={() => {
-        audio.src =`${process.env.PUBLIC_URK}/Song.mp3`
-        audio.play()
-      }
-    }>
-        Hello</button>
       <div className="innhold-wrapper">
         <div>
           <div className="overskriftboks">
@@ -73,6 +60,7 @@ function App() {
           {bobler}
         </div>
       </div>
+      <Song />
     </div>
   );
 }
