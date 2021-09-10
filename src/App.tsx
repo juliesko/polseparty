@@ -31,7 +31,6 @@ const bobler = Array.from(Array(antallBilder).keys()).map((tall) => {
 
 
 function App() {
-
   return (
     <div className="app">
       <div className="innhold-wrapper">
