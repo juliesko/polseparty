@@ -31,13 +31,17 @@ h1, h2 {
   z-index: 103;
 }
 
+h3 {
+  margin-top: 50px;
+}
+
 .innholdsboks {
   width: 100%;
   z-index: 100;
 }
 
 .app {
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
   text-align: center;
   background: linear-gradient(-12deg, rgb(187, 94, 182), rgb(255, 232, 205))
@@ -78,7 +82,23 @@ h1, h2 {
   display:block ;
 }
 
+.kolonne {
+  display: inline-block;
+  min-width: 150px;
+}
 
+.lagwrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 600px) {
+  .app {
+    height: 250vh;
+  }
+
+}
 
 @keyframes fall{
     0%{
